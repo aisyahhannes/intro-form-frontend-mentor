@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --red: #ff7a7a;
+    --green: #38cc8c;
+    --blue: #6055a5;
+    --dark_blue: #3e3c49;
+    --grayish_blue: #b9b6d3;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+    background-image: url(images/bg-intro-desktop.png);
+    font-family: 'Poppins';
+}
+
+main {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+/* Headings and paragraph */
+h1 {
+    font-size: 35px;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* Specific classes */
+.intro {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+    color: white;
+    gap: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.price {
+    text-align: center;
+    background-color: var(--blue);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.details {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.details p {
+    font-size: 12px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.first, .last, .email, .password {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: right;
+    font-style: italic;
+    font-weight: 500;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    border: 1.5px solid black;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+input[type="button"] {
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px rgb(57, 167, 120);
+}
+
+input[type="button"]:hover {
+    opacity: 0.75;
+}
+
+.terms {
+    color: var(--grayish_blue);
+}
+
+input[class="input-error"] {
+    color: var(--red);
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+    border: 1.5px solid var(--red);
+}
+
+.error {
+    margin: 0;
+    color: var(--red);
+}
+
+span {
+    color: var(--red);
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+
+    main {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .intro {
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+    }
+
+    .form {
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+    }
+}
+
